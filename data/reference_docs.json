@@ -1,0 +1,19 @@
+
+[
+  {
+    "id": "python_basics",
+    "text": "Python is a high-level programming language. Python supports functions, modules, classes, and multiple programming paradigms."
+  },
+  {
+    "id": "database_basics",
+    "text": "A database index helps retrieve records efficiently. Indexes can improve query performance, but they may require additional storage and slow down some write operations."
+  },
+  {
+    "id": "api_basics",
+    "text": "An API allows software applications to communicate. REST APIs commonly use HTTP methods such as GET, POST, PUT, and DELETE."
+  },
+  {
+    "id": "security_basics",
+    "text": "Strong passwords should be unique for each account. Multi-factor authentication adds another layer of account security."
+  }
+]

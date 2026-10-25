@@ -1,0 +1,22 @@
+
+flowchart TD
+    A[User Request] --> B[Input Validation]
+    B --> C{Prompt Injection?}
+    C -->|Yes| R[Safe Refusal]
+    C -->|No| D[PII Detection and Redaction]
+    D --> E[Sensitive Topic Classification]
+    E -->|Restricted| R
+    E -->|Allowed or Review| F[Knowledge Base Retrieval]
+    F --> G[Answer Generation]
+    G --> H[Schema Validation]
+    H -->|Invalid| S[Safe Fallback]
+    H -->|Valid| I[Output PII Detection]
+    I --> J[Groundedness Validation]
+    J -->|Unsupported| S
+    J -->|Supported| K[Validated Response]
+    I -->|PII Found| L[Redact PII]
+    L --> J
+    B -.-> T[Test Suite and Metrics]
+    H -.-> T
+    J -.-> T
+    I -.-> T
